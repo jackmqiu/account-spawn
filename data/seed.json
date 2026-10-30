@@ -1,0 +1,172 @@
+{
+  "users": [
+    {
+      "id": "u_1",
+      "username": "sparrow_dev",
+      "displayName": "Ada Sparrow",
+      "email": "ada@example.com",
+      "createdAt": "2024-02-11T09:30:00.000Z",
+      "account": {
+        "plan": "pro",
+        "status": "active",
+        "location": "Portland, OR",
+        "bio": "Backend engineer. Weekend trail runner."
+      },
+      "subredditInterests": [
+        {
+          "subreddit": "programming",
+          "score": 92
+        },
+        {
+          "subreddit": "trailrunning",
+          "score": 78
+        },
+        {
+          "subreddit": "rust",
+          "score": 64
+        }
+      ],
+      "interests": [
+        "distributed systems",
+        "running",
+        "coffee"
+      ],
+      "schedule": [
+        {
+          "id": "s_11",
+          "day": "mon",
+          "time": "06:30",
+          "action": "Trail run"
+        },
+        {
+          "id": "s_12",
+          "day": "mon",
+          "time": "09:00",
+          "action": "Browse r/programming"
+        },
+        {
+          "id": "s_13",
+          "day": "wed",
+          "time": "12:00",
+          "action": "Post in r/rust"
+        },
+        {
+          "id": "s_14",
+          "day": "fri",
+          "time": "18:00",
+          "action": "Comment on r/trailrunning"
+        },
+        {
+          "id": "s_15",
+          "day": "sat",
+          "time": "07:00",
+          "action": "Long run + post recap"
+        }
+      ]
+    },
+    {
+      "id": "u_2",
+      "username": "kettle_corn",
+      "displayName": "Marcus Lee",
+      "email": "marcus@example.com",
+      "createdAt": "2024-06-03T17:05:00.000Z",
+      "account": {
+        "plan": "free",
+        "status": "active",
+        "location": "Austin, TX",
+        "bio": "Home cook and amateur photographer."
+      },
+      "subredditInterests": [
+        {
+          "subreddit": "cooking",
+          "score": 88
+        },
+        {
+          "subreddit": "photography",
+          "score": 71
+        },
+        {
+          "subreddit": "AskCulinary",
+          "score": 55
+        }
+      ],
+      "interests": [
+        "cooking",
+        "photography",
+        "travel"
+      ],
+      "schedule": [
+        {
+          "id": "s_21",
+          "day": "tue",
+          "time": "19:00",
+          "action": "Share a recipe in r/cooking"
+        },
+        {
+          "id": "s_22",
+          "day": "thu",
+          "time": "20:00",
+          "action": "Ask a question in r/AskCulinary"
+        },
+        {
+          "id": "s_23",
+          "day": "sun",
+          "time": "10:00",
+          "action": "Post photos to r/photography"
+        }
+      ]
+    },
+    {
+      "id": "u_3",
+      "username": "quietfox",
+      "displayName": "Priya Nair",
+      "email": "priya@example.com",
+      "createdAt": "2025-01-20T12:00:00.000Z",
+      "account": {
+        "plan": "team",
+        "status": "suspended",
+        "location": "Toronto, ON",
+        "bio": "Board games, sci-fi, and synths."
+      },
+      "subredditInterests": [
+        {
+          "subreddit": "boardgames",
+          "score": 95
+        },
+        {
+          "subreddit": "printSF",
+          "score": 67
+        },
+        {
+          "subreddit": "synthesizers",
+          "score": 40
+        }
+      ],
+      "interests": [
+        "board games",
+        "science fiction",
+        "music production"
+      ],
+      "schedule": [
+        {
+          "id": "s_31",
+          "day": "wed",
+          "time": "20:00",
+          "action": "Game night thread in r/boardgames"
+        },
+        {
+          "id": "s_32",
+          "day": "sat",
+          "time": "14:00",
+          "action": "Book discussion in r/printSF"
+        },
+        {
+          "id": "s_33",
+          "day": "sun",
+          "time": "16:00",
+          "action": "Patch share in r/synthesizers"
+        }
+      ]
+    }
+  ]
+}

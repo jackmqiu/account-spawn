@@ -1,0 +1,16 @@
+{
+  "name": "account-spawn",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Users, account info, and per-user interests (general and by subreddit).",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
