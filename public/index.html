@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Spawn</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Account Spawn</h1>
+    <button id="new-user-btn" class="btn primary">New user</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <input id="search" type="search" placeholder="Search users, interests, subreddits…" aria-label="Search users">
+      <ul id="user-list" class="user-list" aria-label="Users"></ul>
+    </aside>
+
+    <section id="detail" class="detail" aria-live="polite">
+      <p class="empty">Select a user to see their account and interests.</p>
+    </section>
+  </main>
+
+  <dialog id="new-user-dialog">
+    <form id="new-user-form" method="dialog">
+      <h2>New user</h2>
+      <label>Username <input name="username" required pattern="[A-Za-z0-9_\-]{3,32}"></label>
+      <label>Display name <input name="displayName"></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Plan
+        <select name="plan"><option>free</option><option>pro</option><option>team</option></select>
+      </label>
+      <p class="form-error" hidden></p>
+      <div class="actions">
+        <button type="button" class="btn" data-close>Cancel</button>
+        <button type="submit" class="btn primary">Create</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="detail-template">
+    <div class="detail-header">
+      <div>
+        <h2 data-field="displayName"></h2>
+        <p class="muted">u/<span data-field="username"></span></p>
+      </div>
+      <button class="btn danger" data-action="delete-user">Delete user</button>
+    </div>
+
+    <article class="card">
+      <h3>Account info</h3>
+      <form class="account-form">
+        <label>Display name <input name="displayName"></label>
+        <label>Email <input name="email" type="email"></label>
+        <label>Plan
+          <select name="plan"><option>free</option><option>pro</option><option>team</option></select>
+        </label>
+        <label>Status
+          <select name="status"><option>active</option><option>suspended</option><option>closed</option></select>
+        </label>
+        <label>Location <input name="location"></label>
+        <label class="wide">Bio <textarea name="bio" rows="2"></textarea></label>
+        <p class="muted wide">Member since <span data-field="createdAt"></span> · ID <code data-field="id"></code></p>
+        <p class="form-error wide" hidden></p>
+        <div class="actions wide"><button type="submit" class="btn primary">Save account</button></div>
+      </form>
+    </article>
+
+    <article class="card">
+      <h3>Interest by subreddit</h3>
+      <ul class="subreddit-list"></ul>
+      <form class="inline-form subreddit-form">
+        <input name="subreddit" placeholder="r/subreddit" required aria-label="Subreddit">
+        <input name="score" type="number" min="0" max="100" value="50" required aria-label="Interest score (0-100)">
+        <button type="submit" class="btn">Add / update</button>
+      </form>
+      <p class="form-error" hidden></p>
+    </article>
+
+    <article class="card">
+      <h3>Interests</h3>
+      <ul class="chips interest-list"></ul>
+      <form class="inline-form interest-form">
+        <input name="interest" placeholder="Add an interest" required aria-label="Interest">
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <p class="form-error" hidden></p>
+    </article>
+
+    <article class="card">
+      <h3>Weekly schedule</h3>
+      <div class="week"></div>
+      <form class="inline-form schedule-form">
+        <select name="day" aria-label="Day">
+          <option value="mon">Mon</option><option value="tue">Tue</option><option value="wed">Wed</option>
+          <option value="thu">Thu</option><option value="fri">Fri</option><option value="sat">Sat</option>
+          <option value="sun">Sun</option>
+        </select>
+        <input name="time" type="time" value="09:00" required aria-label="Time">
+        <input name="action" placeholder="Action, e.g. Post in r/cooking" required aria-label="Action">
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <p class="form-error" hidden></p>
+    </article>
+  </template>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
